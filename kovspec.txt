@@ -1,0 +1,7 @@
+A celom egy hotel szoba foglalasos program elkeszitese console-ban.
+
+A Singletonnal hozom létre a Hotel-t magát, telefonszámot, a hotel címét stb.
+
+Factory method-dal a szobákat. Különböző szobák vannak, különböző felszereltséggel.
+
+Adapter / Decorator mintát szeretném még használni, denem tudom, hogy mihez
