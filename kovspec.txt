@@ -4,7 +4,10 @@ A Singletonnal hozom létre a Hotel-t magát, telefonszámot, a hotel címét st
 
 Factory method-dal a szobákat. Különböző szobák vannak, különböző felszereltséggel, a felszereltségeket már Díszítővel kívánom megoldani.
 
-OCP elvet a gyártó metódusnál tudom használni, mert a gyártó által elkészült osztályt a gyermekosztályok tudják módosítani. Closed - az ősosztályra, Opened a gyermekosztályokra
+OCP elvet a gyártó metódusnál tudom használni, mert a gyártó által elkészült osztályt a gyermekosztályok tudják módosítani.
+Closed - az ősosztályra,
+Opened a gyermekosztályokra
 
-Unit tesztet a "képzeletbeli fizetés" során valósítok meg. (max egyenlegnél többet nem lehet fizetni, bankkártya adatok hoszának stimmelnie kell)
+Unit tesztet a "képzeletbeli fizetés" során valósítok meg. (max egyenlegnél többet nem lehet fizetni,
+bankkártya adatok hoszának stimmelnie kell)
 
