@@ -1,7 +1,10 @@
-A celom egy hotel szoba foglalasos program elkeszitese console-ban.
+A célom egy hotelszoba foglalásos program elkészítese consoleos alkalmazásban.
 
 A Singletonnal hozom létre a Hotel-t magát, telefonszámot, a hotel címét stb.
 
 Factory method-dal a szobákat. Különböző szobák vannak, különböző felszereltséggel.
 
-Adapter / Decorator mintát szeretném még használni, denem tudom, hogy mihez
+Adapter / Decorator mintát szeretném még használni, de még nem tudom, hogy mihez.
+
+Unit tesztet a "képzeletbeli fizetés" során valósítok meg. (max egyenlegnél többet nem lehet fizetni, bankkártya adatok hoszának stimmelnie kell)
+
