@@ -23,15 +23,21 @@ public class Progtech_szalloda {
         System.out.print("Mikorra szeretne szobát kivenni? (Formátum: 20200425): ");
         Scanner sc;
         sc=new Scanner(System.in);
+        Random rand=new Random();
+        int random_szam;
+        random_szam= rand.nextInt(11);
         String datum;
         datum=sc.nextLine();
-        Random rand=new Random();
-        int random_szam = rand.nextInt(11);
-        if(random_szam>8)
-            System.out.println("Sajnos erre a napra nincs szabad szoba! Válasszon másik dátumot!");
-        else
-           System.out.print("Az ön által kiválasztott dátum: "+datum);
-         
+        while(random_szam>8)
+        {    
+            System.out.print("Sajnos erre a napra nincs szabad szoba! Válasszon másik dátumot: ");
+            datum=sc.nextLine();
+            random_szam= rand.nextInt(11);
+        }
+        System.out.println("Az ön által kiválasztott dátum: "+datum);
+        System.out.print("Válasszon szobát!");
+        int szobaszam=sc.nextInt();
+        
         
     }
     
