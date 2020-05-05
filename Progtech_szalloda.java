@@ -35,8 +35,15 @@ public class Progtech_szalloda {
             random_szam= rand.nextInt(11);
         }
         System.out.println("Az ön által kiválasztott dátum: "+datum);
-        System.out.print("Válasszon szobát!");
-        int szobaszam=sc.nextInt();
+        System.out.println("Elérhető szobák:");
+        ISzoba sz_1 = new Szoba_huto();
+        ISzoba sz_2 = new Szoba_tv();
+
+
+        System.out.println(sz_1.getSzobaszam()+" "+sz_1.getBerendezes()+" "+sz_1.getAr()+"Ft");
+        System.out.println(sz_2.getSzobaszam()+" "+sz_2.getBerendezes()+" "+sz_2.getAr()+"Ft");
+        
+        System.out.println("Melyik szobát választja: ");
         
         
     }
