@@ -38,14 +38,18 @@ public class Progtech_szalloda {
         System.out.println("Elérhető szobák:");
         ISzoba sz_1 = new Szoba_huto();
         ISzoba sz_2 = new Szoba_tv();
+        ISzoba sz_3 = new Szoba_furdo(new Szoba_tv());
+        ISzoba sz_4 = new Szoba_furdo(new Szoba_huto());
 
 
         System.out.println(sz_1.getSzobaszam()+" "+sz_1.getBerendezes()+" "+sz_1.getAr()+"Ft");
         System.out.println(sz_2.getSzobaszam()+" "+sz_2.getBerendezes()+" "+sz_2.getAr()+"Ft");
+        System.out.println(sz_3.getSzobaszam()+" "+sz_3.getBerendezes()+" "+sz_3.getAr()+"Ft");
+        System.out.println(sz_4.getSzobaszam()+" "+sz_4.getBerendezes()+" "+sz_4.getAr()+"Ft");
         
         System.out.println("Melyik szobát választja: ");
         
         
-    }
+    }2020
     
 }
