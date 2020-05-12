@@ -24,8 +24,7 @@ public class Progtech_szalloda {
         Scanner sc;
         sc=new Scanner(System.in);
         Random rand=new Random();
-        int random_szam;
-        random_szam= rand.nextInt(11);
+        int random_szam= rand.nextInt(11);
         String datum;
         datum=sc.nextLine();
         while(random_szam>8)
@@ -42,14 +41,15 @@ public class Progtech_szalloda {
         ISzoba sz_4 = new Szoba_furdo(new Szoba_huto());
 
 
-        System.out.println(sz_1.getSzobaszam()+" "+sz_1.getBerendezes()+" "+sz_1.getAr()+"Ft");
-        System.out.println(sz_2.getSzobaszam()+" "+sz_2.getBerendezes()+" "+sz_2.getAr()+"Ft");
-        System.out.println(sz_3.getSzobaszam()+" "+sz_3.getBerendezes()+" "+sz_3.getAr()+"Ft");
-        System.out.println(sz_4.getSzobaszam()+" "+sz_4.getBerendezes()+" "+sz_4.getAr()+"Ft");
+        System.out.println(sz_1.getSzobaszam()+"\t"+sz_1.getBerendezes()+"\t"+sz_1.getAr()+"Ft");
+        System.out.println(sz_2.getSzobaszam()+"\t"+sz_2.getBerendezes()+"\t"+sz_2.getAr()+"Ft");
+        System.out.println(sz_3.getSzobaszam()+"\t"+sz_3.getBerendezes()+"\t"+sz_3.getAr()+"Ft");
+        System.out.println(sz_4.getSzobaszam()+"\t"+sz_4.getBerendezes()+"\t"+sz_4.getAr()+"Ft");
         
-        System.out.println("Melyik szobát választja: ");
-        
-        
-    }2020
-    
+        System.out.print("Melyik szobát választja: ");
+        String szobaszam=sc.nextLine();
+    }
+    public boolean szobaszamhossz(String szobaszam){
+            return true;
+    }
 }
