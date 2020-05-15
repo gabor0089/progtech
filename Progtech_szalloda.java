@@ -1,20 +1,9 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package progtech_szalloda;
 import  java.util.Scanner;
 import java.util.Random;
-/**
- *
- * @author renyh
- */
+
 public class Progtech_szalloda {
 
-    /**
-     * @param args the command line arguments
-     */
     public static void main(String[] args) {
         Szalloda.getSzalloda();
         String sznev=Szalloda.getSzallodanev();
@@ -25,8 +14,7 @@ public class Progtech_szalloda {
         sc=new Scanner(System.in);
         Random rand=new Random();
         int random_szam= rand.nextInt(11);
-        String datum;
-        datum=sc.nextLine();
+        String datum=sc.nextLine();
         while(random_szam>8)
         {    
             System.out.print("Sajnos erre a napra nincs szabad szoba! Válasszon másik dátumot: ");
@@ -34,6 +22,8 @@ public class Progtech_szalloda {
             random_szam= rand.nextInt(11);
         }
         System.out.println("Az ön által kiválasztott dátum: "+datum);
+        System.out.print("Éjszakák száma: ");
+        String ejszakak=sc.nextLine();
         System.out.println("Elérhető szobák:");
         ISzoba sz_1 = new Szoba_huto();
         ISzoba sz_2 = new Szoba_tv();
@@ -48,8 +38,25 @@ public class Progtech_szalloda {
         
         System.out.print("Melyik szobát választja: ");
         String szobaszam=sc.nextLine();
+        System.out.print("Adja meg a bankkártyája számát: ");
+        String kartyaszam=sc.nextLine();
+        
+        if(kartyaszam.length()==16)
+        {
+            System.out.println("Kártyaszám elfogadva.");
+            int random_szam2= rand.nextInt(11);
+            if(random_szam2<3)
+                System.out.println("Nincs elég pénz a kártyáján!");
+            else
+                System.out.println("A foglalását rögzítettük.");
+        }
+        else
+            System.out.println("Hibás kártyaszám");
+        
+        
     }
     public boolean szobaszamhossz(String szobaszam){
             return true;
     }
+    
 }

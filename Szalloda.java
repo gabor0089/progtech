@@ -1,19 +1,9 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package progtech_szalloda;
 
-/**
- *
- * @author renyh
- */
 public class Szalloda {
     private static Szalloda szalloda=null;
     private final String nev;
     private final String cim;
-    //private static String Hotelnév="HotelEKE";
     private Szalloda(String nev,String cim){
         this.nev=nev;
         this.cim=cim;
@@ -34,5 +24,10 @@ public class Szalloda {
     {
         return szalloda.cim;
     }
-    
+    public String datumEllenorzes(String datum,String ejszakak){
+        int datumint=Integer.parseInt(datum);
+        int ejszakaint=Integer.parseInt(ejszakak);
+        int utolsonap=datumint+ejszakaint;
+        return String.valueOf(utolsonap);
+    }
 }

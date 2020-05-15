@@ -1,32 +1,16 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package progtech_szalloda;
 
 import org.junit.Test;
 import static org.junit.Assert.*;
 
-/**
- *
- * @author renyh
- */
 public class Progtech_szallodaTest {
     
     public Progtech_szallodaTest() {
     }
-
-    /**
-     * Test of main method, of class Progtech_szalloda.
-     */
     @Test
     public void testMain() {
     }
 
-    /**
-     * Test of szobaszamhossz method, of class Progtech_szalloda.
-     */
     @Test
     public void testSzobaszamhossz() {
         //Ha a szobaszám 3 karakternél több, akkor bukik.
@@ -35,5 +19,14 @@ public class Progtech_szallodaTest {
         boolean actual=szoba.length()<=3;
         assertEquals(expected,actual);
     }
-    
+    @Test
+    public void datumEllenorzes(){
+        Szalloda szalloda=Szalloda.getSzalloda();
+        String datum="20200515";
+        String ejszakak="3";
+        String expected="20200518";
+        String actual=szalloda.datumEllenorzes(datum, ejszakak);
+        assertEquals(expected,actual);
+        
+    }
 }
