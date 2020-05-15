@@ -12,6 +12,7 @@ public class Szalloda {
     {
         String nev="HotelEKE";
         String cim="3300 Eger, Eke út 2020.";
+        int ferohely=100;
         if(szalloda==null) 
             szalloda=new Szalloda(nev,cim);
         return szalloda;
@@ -29,5 +30,8 @@ public class Szalloda {
         int ejszakaint=Integer.parseInt(ejszakak);
         int utolsonap=datumint+ejszakaint;
         return String.valueOf(utolsonap);
+    }
+    public int ferohelyModositas(int ferohely,int modositas){
+        return ferohely+modositas;
     }
 }

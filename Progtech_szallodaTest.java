@@ -7,9 +7,6 @@ public class Progtech_szallodaTest {
     
     public Progtech_szallodaTest() {
     }
-    @Test
-    public void testMain() {
-    }
 
     @Test
     public void testSzobaszamhossz() {
@@ -27,6 +24,14 @@ public class Progtech_szallodaTest {
         String expected="20200518";
         String actual=szalloda.datumEllenorzes(datum, ejszakak);
         assertEquals(expected,actual);
-        
+    }
+    @Test
+    public void ferohelyEllenorzes(){
+        Szalloda szalloda=Szalloda.getSzalloda();
+        int ferohely=100;
+        int modositas=-5;
+        int expected=95;
+        int actual=szalloda.ferohelyModositas(ferohely,modositas);
+        assertEquals(expected,actual);
     }
 }
