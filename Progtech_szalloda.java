@@ -45,7 +45,7 @@ public class Progtech_szalloda {
         {
             System.out.println("Kártyaszám elfogadva.");
             int random_szam2= rand.nextInt(11);
-            if(random_szam2<3)
+            if(random_szam2<2)
                 System.out.println("Nincs elég pénz a kártyáján!");
             else
                 System.out.println("A foglalását rögzítettük.");

@@ -1,4 +1,5 @@
 package progtech_szalloda;
+
 public class Szoba_tv implements ISzoba {
 
     @Override
