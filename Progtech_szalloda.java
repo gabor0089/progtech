@@ -1,5 +1,5 @@
 package progtech_szalloda;
-import  java.util.Scanner;
+import java.util.Scanner;
 import java.util.Random;
 
 public class Progtech_szalloda {
@@ -38,21 +38,12 @@ public class Progtech_szalloda {
         
         System.out.print("Melyik szobát választja: ");
         String szobaszam=sc.nextLine();
-        System.out.print("Adja meg a bankkártyája számát: ");
-        String kartyaszam=sc.nextLine();
-        
-        if(kartyaszam.length()==16)
-        {
-            System.out.println("Kártyaszám elfogadva.");
-            int random_szam2= rand.nextInt(11);
-            if(random_szam2<2)
-                System.out.println("Nincs elég pénz a kártyáján!");
-            else
-                System.out.println("A foglalását rögzítettük.");
-        }
-        else
-            System.out.println("Hibás kártyaszám");
-        
+        System.out.print("Bankkártyával (b) vagy készpénzzel (k) szeretne fizetni? ");
+        String fizmod=sc.nextLine();
+        FizetesiMod fizetesimod= new FizetesiMod(new FizetKP());
+        if(fizmod.equals("b"))
+            fizetesimod.setFizetes(new FizetBank());
+        fizetesimod.Fizetes();
         
     }
     public boolean szobaszamhossz(String szobaszam){
