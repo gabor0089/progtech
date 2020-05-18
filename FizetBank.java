@@ -4,26 +4,35 @@ import java.util.Scanner;
 import java.util.Random;
 
 
-class FizetBank implements Fizetes{
+class FizetBank implements Fizetes {
 
-    public void Fizetes(){
+    public void Fizetes() {
         Scanner sc=new Scanner(System.in);
-        Random rand=new Random();
         System.out.print("Bankkártyával való fizetés van kiválasztva. ");
         
         System.out.print("Adja meg a bankkártyája számát: ");
         String kartyaszam=sc.nextLine();
+        hosszEllenorzes(kartyaszam);
         
-        if(kartyaszam.length()==16)
-        {
-            System.out.println("Kártyaszám elfogadva.");
-            int random_szam2= rand.nextInt(11);
-            if(random_szam2<2)
-                System.out.println("Nincs elég pénz a kártyáján!");
+    }
+    public String hosszEllenorzes(String kartyaszam) throws NotCorrectLengthException{
+        kartyaszam="1234123412341234";
+        try{
+            if(kartyaszam.length()==16)
+            {
+                Random rand=new Random();
+                int random_szam2= rand.nextInt(11);
+                if(random_szam2<2)
+                    return "Nincs elég pénz a kártyáján!";
+                else
+                    return "A foglalását rögzítettük.";
+            }
             else
-                System.out.println("A foglalását rögzítettük.");
+                return "Hibás kártyaszám";        
         }
-        else
-            System.out.println("Hibás kártyaszám");
+        catch(NotCorrectLengthException e){
+            System.out.println(e.getMessage());
+        }
+        return "";
     }
 }

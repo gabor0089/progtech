@@ -32,6 +32,13 @@ public class Progtech_szallodaTest {
         int modositas=-5;
         int expected=95;
         int actual=szalloda.ferohelyModositas(ferohely,modositas);
-        assertEquals(expected,actual);
+        assertEquals(expected,actual);   
+    }
+    @Test
+    public void bankkartyaEllenorzes() throws NotCorrectLengthException{
+        String value="1234123412341234";
+        if(value.length()!=16)
+            throw new NotCorrectLengthException("Nem érvényes formátum.");
+        
     }
 }
